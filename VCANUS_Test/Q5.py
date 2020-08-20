@@ -12,7 +12,7 @@ for i in range(len(pond)):
 
 
 
-#
+
 depth = 0
 while True:
     tmp = copy.deepcopy(pond)
@@ -21,6 +21,7 @@ while True:
             if pond[i][j] > 0:
                 if (pond[i][j] <= pond[i-1][j]) and (pond[i][j] <= pond[i][j-1]) and (pond[i][j] <= pond[i][j+1]) and (pond[i][j] <= pond[i+1][j]):
                     pond[i][j] = pond[i][j] +1
+                    
     if tmp == pond:
         for i in range(len(pond)):
             for j in range(len(pond[i])):
@@ -32,4 +33,5 @@ for i in range(len(pond)):
     for j in range(len(pond[i])):
        print(pond[i][j],end=" ")
     print()
-print(depth)
+
+print("\n연못의 깊이의 총 합은 "+str(depth))
